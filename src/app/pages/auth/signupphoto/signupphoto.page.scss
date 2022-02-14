@@ -1,0 +1,98 @@
+ion-content {
+  --background: linear-gradient(218deg, rgba(255,216,17,1) 0%, rgba(240,255,0,1) 100%);
+}
+ion-toolbar {
+  --background: #ffffff;
+}
+
+ion-title {
+  color: #000000;
+  text-align: center;
+}
+
+ion-grid {
+  margin-top: 20%;
+}
+
+ion-avatar {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  border: 10px solid white;
+}
+
+.itemreg {
+  font-family: 'Helvetica';
+  --background: #d6d6d6;
+  color: darkslategrey;
+  text-align: center;
+  width: 100%;
+  font-weight: normal;
+  font-size: 30px;
+  padding: 20px 0px 20px 0px;
+}
+
+.desc {
+  font-family: 'Helvetica';
+  --background: #d6d6d6;
+  color: darkslategrey;
+  text-align: center;
+  width: 100%;
+  font-weight: normal;
+  padding: 20px 0px 20px 0px;
+}
+
+.btnphoto {
+  --background: #FF2937;
+  //margin: 0 auto;
+  --border-radius: 25px;
+  height: 50px;
+  font-weight: normal;
+  font-family: Helvetica;
+  font-size: large;
+  color: white;
+  //padding: 0px 40px 0px 40px;
+
+}
+
+.btncol {
+  --background: dimgrey;
+  margin: 0 auto;
+  width: 100%;
+  height: 50px;
+  --border-radius: 25px;
+}
+ion-icon {
+  color: #FFF !important;
+  font-size: 30px;
+}
+
+.btncol ion-icon {
+  width:30px;
+  height: 30px;
+}
+
+.zoom-btn {
+  color: #000 !important;
+}
+
+.menu-btn,
+.button-md.activated {
+  background-color: transparent;
+}
+
+.btnrow {
+  margin:0px 60px 0px 60px;
+}
+
+.removebtn {
+  --background: dimgrey;
+  --border-radius: 50px;
+  height: 50px;
+  width: 50px
+  
+}
+
+.btn {
+  padding: 0px 60px 0px 60px;
+}

@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="dismissLogin()">
+        <ion-icon class="iconback" slot="icon-only" name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>iCommerce</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div id="container">
+    <ion-img src="../assets/icon/logo-icomm.png"></ion-img>
+  </div>
+  <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Matric Number</ion-label>
+            <ion-input type="text" onkeyup="this.value = this.value.toUpperCase();" [(ngModel)]="matricno" required></ion-input>
+          </ion-item>
+          
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Password</ion-label>
+            <ion-input type="password" [(ngModel)]="pass" required></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+            <ion-button class="btnlogin" (click)="signin()" expand="block">SIGN IN</ion-button>
+        </ion-col>
+      </ion-row>
+  </ion-grid>
+
+</ion-content>

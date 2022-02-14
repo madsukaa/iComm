@@ -1,0 +1,95 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="dismissLogin()">
+        <ion-icon class="iconback" slot="icon-only" name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Teaching Subject</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item class="boxinput">
+          <ion-label position="floating">Class</ion-label>
+          <ion-select interface="popover" [(ngModel)]="classe">
+            <ion-select-option *ngFor="let classes of class" value="{{classes.classcourse_id}}">{{classes.classcourse_name}}</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item class="boxinput">
+          <ion-label position="floating">Subject</ion-label>
+          <ion-select interface="popover" [(ngModel)]="subjecte">
+            <ion-select-option *ngFor="let subjects of subject" value="{{subjects.subject_id}}">{{subjects.subject_name}}</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item class="boxinput">
+          <ion-label position="floating">Start Time</ion-label>
+          <ion-select interface="popover" [(ngModel)]="starte">
+            <ion-select-option value="08:00">08:00 AM</ion-select-option>
+            <ion-select-option value="09:00">09:00 AM</ion-select-option>
+            <ion-select-option value="10:00">10:00 AM</ion-select-option>
+            <ion-select-option value="11:00">11:00 AM</ion-select-option>
+            <ion-select-option value="12:00">12:00 PM</ion-select-option>
+            <ion-select-option value="13:00">01:00 PM</ion-select-option>
+            <ion-select-option value="14:00">02:00 PM</ion-select-option>
+            <ion-select-option value="15:00">03:00 PM</ion-select-option>
+            <ion-select-option value="16:00">04:00 PM</ion-select-option>
+            <ion-select-option value="17:00">05:00 PM</ion-select-option>
+            <ion-select-option value="18:00">06:00 PM</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item class="boxinput">
+          <ion-label position="floating">End Time</ion-label>
+          <ion-select interface="popover" [(ngModel)]="ende">
+            <ion-select-option value="09:00">09:00 AM</ion-select-option>
+            <ion-select-option value="10:00">10:00 AM</ion-select-option>
+            <ion-select-option value="11:00">11:00 AM</ion-select-option>
+            <ion-select-option value="12:00">12:00 PM</ion-select-option>
+            <ion-select-option value="13:00">01:00 PM</ion-select-option>
+            <ion-select-option value="14:00">02:00 PM</ion-select-option>
+            <ion-select-option value="15:00">03:00 PM</ion-select-option>
+            <ion-select-option value="16:00">04:00 PM</ion-select-option>
+            <ion-select-option value="17:00">05:00 PM</ion-select-option>
+            <ion-select-option value="18:00">06:00 PM</ion-select-option>
+            <ion-select-option value="19:00">07:00 PM</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item class="boxinput">
+          <ion-label position="floating">Day</ion-label>
+          <ion-select interface="popover" [(ngModel)]="daye">
+            <ion-select-option value="Monday">Monday</ion-select-option>
+            <ion-select-option value="Tuesday">Tuesday</ion-select-option>
+            <ion-select-option value="Wednesday">Wednesday</ion-select-option>
+            <ion-select-option value="Thursday">Thursday</ion-select-option>
+            <ion-select-option value="Friday">Friday</ion-select-option>
+
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button class="btnsignup" (click)="addteach()" expand="block">ADD TEACHING SUBJECT</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

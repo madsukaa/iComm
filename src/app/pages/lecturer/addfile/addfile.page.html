@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="dismissLogin()">
+        <ion-icon class="iconback" slot="icon-only" name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>File</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item class="boxinput">
+          <ion-label position="floating">File Name</ion-label>
+          <ion-input type="text" onkeyup="this.value = this.value.toUpperCase();" [(ngModel)]="filenames" required></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item class="boxinput">
+          <ion-label position="floating">Assessment Type</ion-label>
+          <ion-select interface="popover" [(ngModel)]="asstype">
+            <ion-select-option value="LECTURENOTE">Lecture Note</ion-select-option>
+            <ion-select-option value="QUIZ">Quiz</ion-select-option>
+            <ion-select-option value="PASTYEAR">Past Year Question</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item class="boxinput">
+          <ion-label position="floating">File Type</ion-label>
+          <ion-select interface="popover" [(ngModel)]="filetype">
+            <ion-select-option value="LINK">URL Link</ion-select-option>
+            <ion-select-option value="FILE">File</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="filetype=='LINK'">
+      <ion-col>
+        <ion-item class="boxinput">
+          <ion-label position="floating">URL</ion-label>
+          <ion-input type="text" [(ngModel)]="url" required></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="filetype=='FILE'">
+      <ion-col>
+        <ion-item class="boxinput">
+          <ion-label>Add File</ion-label>
+          <input type="file" accept="application/pdf" #fileInput (change)="onFileChange($event)" />
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="asstype=='LECTURENOTE'">
+      <ion-col>
+        <ion-button class="btnsignup" (click)="addlecturenote()" expand="block">ADD LECTURE NOTE</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="asstype=='QUIZ'">
+      <ion-col>
+        <ion-button class="btnsignup" (click)="addquiz()" expand="block">ADD QUIZ</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="asstype=='PASTYEAR'">
+      <ion-col>
+        <ion-button class="btnsignup" (click)="addpastyear()" expand="block">ADD PAST YEAR</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

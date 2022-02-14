@@ -1,0 +1,89 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="dismissLogin()">
+        <ion-icon class="iconback" slot="icon-only" name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>iCommerce</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-grid>
+    <!--<form #form="ngForm" (ngSubmit)="signup(form)">-->
+    <ion-row class="atas">
+      <ion-col>
+        <ion-item class="boxinput">
+          <ion-label position="floating">Full Name (as per IC/Passport)</ion-label>
+          <ion-input type="text" onkeyup="this.value = this.value.toUpperCase();" [(ngModel)]="name" required></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item class="boxinput">
+          <ion-label position="floating">Matric Number / Staff ID</ion-label>
+          <ion-input type="text" onkeyup="this.value = this.value.toUpperCase();" [(ngModel)]="matricno" required></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item class="boxinput">
+          <ion-label position="floating">Phone Number</ion-label>
+          <ion-input type="text" [(ngModel)]="phoneno" required></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item class="boxinput">
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="email" [(ngModel)]="email" required></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item class="boxinput">
+          <ion-label position="floating">Gender</ion-label>
+          <ion-select interface="popover" [(ngModel)]="gender">
+            <ion-select-option value="Male">Male</ion-select-option>
+            <ion-select-option value="Female">Female</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item class="boxinput">
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="password" [(ngModel)]="pass" required></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item class="boxinput">
+          <ion-label position="floating">Confirm Password</ion-label>
+          <ion-input type="password" [(ngModel)]="cpass" required></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="boxs">
+        <ion-checkbox [(ngModel)]="check" required></ion-checkbox>
+        <ion-label class="boxcheck">iComm's Terms of User & Privacy Policy</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button [disabled]=!check class="btnsignup" (click)="signup()" expand="block">REGISTER</ion-button>
+      </ion-col>
+    </ion-row>
+    <!--</form>-->
+  </ion-grid>
+
+</ion-content>
