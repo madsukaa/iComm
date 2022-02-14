@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="dismissLogin()">
+        <ion-icon class="iconback" slot="icon-only" name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Subject</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-list>
+    <ion-item-divider class="title">
+      <ion-label>
+        LECTURERS' NOTES
+      </ion-label>
+    </ion-item-divider>
+    <ion-item-sliding *ngFor="let l of lnote">
+        <ion-item><ion-label>{{l.subjectfile_name}}</ion-label><ion-button (click)="downloadfile(l.subjectfile_name, l.subjectfile_file, l.subjectfile_filetype)" style="height: 30px; width: 30px;"><ion-icon name="download"></ion-icon></ion-button></ion-item>
+     
+    </ion-item-sliding>
+    <ion-item-divider class="title">
+      <ion-label>
+        TEST/QUIZZES
+      </ion-label>
+    </ion-item-divider>
+    <ion-item-sliding *ngFor="let q of quizz">
+      <ion-item><ion-label>{{q.subjectfile_name}}</ion-label><ion-button (click)="downloadfile(q.subjectfile_name, q.subjectfile_file, q.subjectfile_filetype)" style="height: 30px; width: 30px;"><ion-icon name="download"></ion-icon></ion-button></ion-item>
+    </ion-item-sliding>
+
+    <ion-item-divider class="title">
+      <ion-label>
+        PAST YEAR QUESTIONS
+      </ion-label>
+    </ion-item-divider>
+    <ion-item-sliding *ngFor="let p of pyear">
+      <ion-item><ion-label>{{p.subjectfile_name}}</ion-label><ion-button (click)="downloadfile(p.subjectfile_name, p.subjectfile_file, p.subjectfile_filetype)" style="height: 30px; width: 30px;"><ion-icon name="download"></ion-icon></ion-button></ion-item>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>
