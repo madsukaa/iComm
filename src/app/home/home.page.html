@@ -1,0 +1,18 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div id="container">
+    <ion-img src="../assets/icon/logo-icomm.png"></ion-img>
+  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col><ion-button class="btnlogin" expand="block" (click)="Signin()">SIGN IN</ion-button></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col><ion-button class="btnregister" expand="block" (click)="Signup()">REGISTER</ion-button></ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

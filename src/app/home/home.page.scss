@@ -1,0 +1,96 @@
+#container {
+  text-align: center;
+  padding: 40px;
+  margin-top: 30%;
+  //position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  //transform: translateY(-50%);
+  animation: fadeIn 2s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+}
+
+ion-content {
+  --background: #ffd800;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.btnlogin {
+  --background: #ff6a00;
+  width: 85%;
+  margin: 0 auto;
+  --border-radius: 25px;
+  height: 50px;
+  font-weight: normal;
+  font-size: large;
+  font-family: Helvetica;
+}
+
+.btnregister {
+  --background: white;
+  width: 85%;
+  margin: 0 auto;
+  --border-radius: 25px;
+  height: 50px;
+  font-weight: normal;
+  font-size: large;
+  color: dimgrey;
+  font-family: Helvetica;
+}
+
+ion-grid {
+  margin-top: 80px;
+}
