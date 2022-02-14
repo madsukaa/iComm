@@ -1,0 +1,7 @@
+{
+  "name": "iComm",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
